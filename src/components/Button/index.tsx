@@ -1,13 +1,14 @@
 import React from 'react'
 import { ButtonContainer } from './styles'
 
-interface ButtonProps {
-  title : string
+export interface ButtonProps {
+  title?: string,
+  fullwidth?: boolean
 }
 
 export  function Button({...props} : ButtonProps) {
   return (
-    <ButtonContainer>
+    <ButtonContainer fullwidth={props.fullwidth}>
       {props.title}
     </ButtonContainer>
   )

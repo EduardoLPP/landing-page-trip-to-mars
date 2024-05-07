@@ -1,10 +1,5 @@
 import styled from "styled-components";
-
-function pixelToRem(...values: number[]){
-    return values
-        .reduce((acc, current) => (acc += current / 16 + `rem `), "")
-        .trim()
-}
+import { pixelToRem } from "../utils/pixelToRemFunction";
 
 export const Container = styled.div`
     display: flex;
@@ -16,6 +11,7 @@ export const Container = styled.div`
 
 export const Header = styled.div`
     display: flex;
+    padding-bottom: ${pixelToRem(95)};
 `;
 
 export const Logo = styled.image`
@@ -27,12 +23,15 @@ export const Logo = styled.image`
 export const HeaderMain = styled.div`
     display: flex;
     flex-direction: column;
+    max-width: ${pixelToRem(715)};
+    padding-bottom: ${pixelToRem(32)};
 `;
 
 export const FirstTitle = styled.p`
     color: var(--sun);
     font: var(--text-03);
     text-transform: uppercase;
+    letter-spacing: ${pixelToRem(5)};
 `;
 
 export const SecondTitle = styled.p`
@@ -45,10 +44,26 @@ export const SecondTitle = styled.p`
 `;
 
 export const Subtitle = styled.p`
-color: var(--gray-05);
+    color: var(--gray-05);
     font: var(--font-heading-3);
+    max-width: ${pixelToRem(630)};
 `;
 
 export const AstronautIllustration = styled.image`
+    width: ${pixelToRem(450)};
+    height: ${pixelToRem(580)};
+    background-image: url("/images/home-mars-right.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    right: ${pixelToRem(0)};
+    top: ${pixelToRem(15)};
+`;
 
+export const IconsContainer = styled.div`
+    margin-top: ${pixelToRem(135)};
+    justify-content: space-between;
+    max-width: ${pixelToRem(1440)};
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 `;
