@@ -25,6 +25,7 @@ export const GlobalStyles = createGlobalStyle`
 
     body{
         -webkit-font-smoothing: antialised;
+        background-color: var(--background);
     }
     
     body, input, textarea, button{
@@ -49,11 +50,12 @@ export const GlobalStyles = createGlobalStyle`
         --earth: #0fdd86;
         --saturn: #554ad7;
         --text: #fff;
+        --background: #04032c;
 
-        --font-display: 800 ${pixelToRem(62)}/500 ${pixelToRem(96)} "Heboo", sans-serif;
-        --font-heading-1: 700 ${pixelToRem(32)}/500 ${pixelToRem(48)} "Heboo", sans-serif; 
-        --font-heading-2: 500 ${pixelToRem(24)}/500 ${pixelToRem(32)} "Heboo", sans-serif;
-        --font-heading-3: 400 ${pixelToRem(20)}/500 ${pixelToRem(24)} "Heboo", sans-serif;
+        --font-display: 800 ${pixelToRem(62)}/${pixelToRem(96)} "Heboo", sans-serif;
+        --font-heading-1: 700 ${pixelToRem(32)}/${pixelToRem(48)} "Heboo", sans-serif; 
+        --font-heading-2: 500 ${pixelToRem(24)}/${pixelToRem(32)} "Heboo", sans-serif;
+        --font-heading-3: 400 ${pixelToRem(20)}/${pixelToRem(24)} "Heboo", sans-serif;
         --text-04: 500 ${pixelToRem(18)}/${pixelToRem(32)} "Heboo", sans-serif;
         --text-03: 500 ${pixelToRem(18)}/${pixelToRem(24)} "Heboo", sans-serif;
         --text-02: 500 ${pixelToRem(14)}/${pixelToRem(20)} "Heboo", sans-serif;

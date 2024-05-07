@@ -1,5 +1,5 @@
 import { GlobalStyles } from './styles/globalstyles';
-import { Header, Logo, HeaderMain, Title, Subtitle } from './styles/styles';
+import { Container, Header, Logo, HeaderMain, FirstTitle, Subtitle, SecondTitle, AstronautIllustration } from './styles/styles';
 import { Button } from './components/Button';
 
 function App() {
@@ -7,21 +7,24 @@ function App() {
     <>
       <GlobalStyles />
       
-      <Header>
-        <Logo>
-          <img src="/public/images/logo-space-y.svg" alt="SPACE-Y"/>
-        </Logo>  
-      </Header>
+      <Container>
+        <Header>
+          <Logo />  
+        </Header>
 
-      <HeaderMain>
-        <p>Finalmente é possível</p>
+        <HeaderMain>
+          <FirstTitle>Finalmente é possível</FirstTitle>
 
-        <Title>Sua jornada para Marte começa aqui<span>.</span></Title>
+          <SecondTitle>Sua jornada para Marte começa aqui<span>.</span></SecondTitle>
 
-        <Subtitle>A primeira viagem estará disponível apartir do dia 12/03/2028. Inscreva-se em nossa lista de espera</Subtitle>
-      </HeaderMain>
+          <Subtitle>A primeira viagem estará disponível apartir do dia 12/03/2028. Inscreva-se em nossa lista de espera</Subtitle>
+        </HeaderMain>
+        
+        <AstronautIllustration />
 
-      <Button title='Inscreva-se agora' />
+        <Button title='Inscreva-se agora' />
+
+      </Container>
     </>
   );
 }
