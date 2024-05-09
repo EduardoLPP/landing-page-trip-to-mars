@@ -1,12 +1,17 @@
 import styled from "styled-components";
 import { pixelToRem } from "../utils/pixelToRemFunction";
 
-interface GalleryFlexProps { flex: "row" | "column" }
+interface GalleryFlexProps { 
+    flex?: "row" | "column"; 
+    width?: string;
+    margin?: string;
+}
 
-export const Container = styled.div`
+export const Container = styled.div<GalleryFlexProps>`
     display: flex;
-    flex-direction: column;
-    padding: ${pixelToRem(24, 112, 50, 112)};
+    flex-direction: ${(props) => props.flex};
+    width: ${(props) => props.width};
+    margin: ${(props) => props.margin};
 `;
 
 export const Header = styled.div`
@@ -68,13 +73,11 @@ export const IconsContainer = styled.div`
     align-items: center;
 `;
 
-export const SectionAbout = styled.div` 
+export const SectionAbout = styled.div<GalleryFlexProps>` 
     display: flex;
     justify-content: center;
     background: url("/images/stars.jpg"), no-repeat;
-    flex-direction: row;
-    padding-right: ${pixelToRem(100)};
-    padding-left: ${pixelToRem(100)};
+    flex-direction: ${(props) => props.flex};
 `;
 
 export const ImageMars = styled.image`
@@ -82,11 +85,13 @@ export const ImageMars = styled.image`
     height: ${pixelToRem(800)};
     background-image: url("/images/mars.svg");
     background-repeat: no-repeat;
+    margin-left: ${pixelToRem(50)};
 `;
 
-export const AboutMain = styled.div`
+export const AboutMain = styled.div<GalleryFlexProps>`
     max-width: ${pixelToRem(603)};
     padding-top: ${pixelToRem(100)};
+    margin: ${(props) => props.margin};
 `;
 
 export const SecondSubTitle = styled.p`
@@ -104,4 +109,10 @@ export const TextAbout = styled.p`
 export const Gallery = styled.div<GalleryFlexProps>`
     display: flex;
     flex-direction: ${(props) => props.flex};
+`;
+
+export const ContainerAbout = styled.div<GalleryFlexProps>`
+    display: flex;
+    flex-direction: ${(props) => props.flex};
+    justify-content: center;
 `;
