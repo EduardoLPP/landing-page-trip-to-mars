@@ -1,15 +1,16 @@
 import { GlobalStyles } from './styles/globalstyles';
 import { Container, Header, Logo, HeaderMain, FirstTitle, Subtitle, SecondTitle, AstronautIllustration, IconsContainer, SectionAbout, ImageMars, AboutMain,
-SecondSubTitle, TextAbout, Gallery} from './styles/styles';
+SecondSubTitle, TextAbout, Gallery, ContainerAbout} from './styles/styles';
 import { Button } from './components/Button';
 import { Icon } from './components/Icon';
+import { pixelToRem } from './utils/pixelToRemFunction';
 
 function App() {
   return (
     <>
       <GlobalStyles />
       
-      <Container>
+      <Container flex='column' margin={ pixelToRem(24, 112, 50) }> 
         <Header>
           <Logo />  
         </Header>
@@ -37,37 +38,40 @@ function App() {
 
       </Container>
 
-      <SectionAbout>
-        <ImageMars/>
-        
-        <Container>
-          <AboutMain>
-            <FirstTitle>Por que Marte?</FirstTitle>
+      <SectionAbout flex="column">
+        <Container flex="row" >
 
-            <SecondSubTitle>Sobre o planeta vermermelho</SecondSubTitle>
+          <ContainerAbout flex="row">
+            <ImageMars/>
+            
+              <AboutMain margin='0 auto'>
+                <FirstTitle>Por que Marte?</FirstTitle>
 
-            <TextAbout>A uma distância média de 140 milhões de milhas, Marte é um
-              dos vizinhos habitáveis mais próximos da Terra. Marte está mais ou
-              menos metade da distância da Terra do Sol, então ainda tem luz
-              solar descente. Está um pouco frio, mas podemos esquentar. Sua 
-              atmosfera é composta principalmente de CO2 com um pouco de nitrogênio
-              e arg^nio e alguns outros oligoelementos, o que significa que podemos 
-              cultivar plantas em Marte apenas comprimindo a atmosfera. 
-            </TextAbout>
+                <SecondSubTitle>Sobre o planeta vermermelho</SecondSubTitle>
 
-            <TextAbout>A gravidade em Marte é cerca de 38% da da Terra, então você
-              seria capaz de levantar coisas pesadas e dar voltas. Além disso, o 
-              o dia está notavelmente próximo ao da terra.
-            </TextAbout>
-          </AboutMain>
-        </Container>
+                <TextAbout>A uma distância média de 140 milhões de milhas, Marte é um
+                  dos vizinhos habitáveis mais próximos da Terra. Marte está mais ou
+                  menos metade da distância da Terra do Sol, então ainda tem luz
+                  solar descente. Está um pouco frio, mas podemos esquentar. Sua 
+                  atmosfera é composta principalmente de CO2 com um pouco de nitrogênio
+                  e arg^nio e alguns outros oligoelementos, o que significa que podemos 
+                  cultivar plantas em Marte apenas comprimindo a atmosfera. 
+                </TextAbout>
 
-          <Gallery flex={"row"}>
-            <Logo />
-          </Gallery>
+                <TextAbout>A gravidade em Marte é cerca de 38% da da Terra, então você
+                  seria capaz de levantar coisas pesadas e dar voltas. Além disso, o 
+                  o dia está notavelmente próximo ao da terra.
+                </TextAbout>
+              </AboutMain>
+
+            </ContainerAbout>
+          </Container>
+
+            <Gallery flex="column">
+                <Logo />
+            </Gallery>
         </SectionAbout>
 
-       
     </>
   );
 }
