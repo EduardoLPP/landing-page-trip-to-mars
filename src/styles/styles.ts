@@ -78,6 +78,8 @@ export const SectionAbout = styled.div<GalleryFlexProps>`
     justify-content: center;
     background: url("/images/stars.jpg"), no-repeat;
     flex-direction: ${(props) => props.flex};
+    background-size: cover;
+    margin-top: ${pixelToRem(180)};
 `;
 
 export const ImageMars = styled.image`
@@ -107,12 +109,28 @@ export const TextAbout = styled.p`
 `;
 
 export const Gallery = styled.div<GalleryFlexProps>`
-    display: flex;
-    flex-direction: ${(props) => props.flex};
+    margin: ${pixelToRem(188, 100, 157, 100)};
+    max-width: ${pixelToRem(318)};
 `;
 
 export const ContainerAbout = styled.div<GalleryFlexProps>`
     display: flex;
     flex-direction: ${(props) => props.flex};
     justify-content: center;
+    margin-top: ${pixelToRem(180)};
+`;
+
+export const TextLogo = styled.text`
+    font: var(--font-heading-1);
+    color: var(--text);
+`;
+
+export const TextSubscribe = styled.div`
+    font: var(--text-3);
+    color: var(--mars-light);
+`;
+
+export const ContainerLogo = styled.div`
+    margin: ${pixelToRem(188, 100, 157, 100)};
+    max-width: ${pixelToRem(318)};
 `;

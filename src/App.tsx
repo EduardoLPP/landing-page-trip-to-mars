@@ -1,6 +1,6 @@
 import { GlobalStyles } from './styles/globalstyles';
 import { Container, Header, Logo, HeaderMain, FirstTitle, Subtitle, SecondTitle, AstronautIllustration, IconsContainer, SectionAbout, ImageMars, AboutMain,
-SecondSubTitle, TextAbout, Gallery, ContainerAbout} from './styles/styles';
+SecondSubTitle, TextAbout, Gallery, ContainerAbout, TextLogo, TextSubscribe, ContainerLogo} from './styles/styles';
 import { Button } from './components/Button';
 import { Icon } from './components/Icon';
 import { pixelToRem } from './utils/pixelToRemFunction';
@@ -39,7 +39,7 @@ function App() {
       </Container>
 
       <SectionAbout flex="column">
-        <Container flex="row" >
+        <Container flex="row" width='100%'>
 
           <ContainerAbout flex="row">
             <ImageMars/>
@@ -67,9 +67,22 @@ function App() {
             </ContainerAbout>
           </Container>
 
-            <Gallery flex="column">
-                <Logo />
-            </Gallery>
+          
+          <ContainerLogo>
+            <Logo />
+
+            <TextLogo>
+              O caminho para tornar a humanidade multiplanetária <span>.</span>
+            </TextLogo>
+          
+            <TextSubscribe>
+              Inscreva-se
+            </TextSubscribe>
+          </ContainerLogo>
+                
+          <Gallery flex="column">
+          
+          </Gallery>
         </SectionAbout>
 
     </>
