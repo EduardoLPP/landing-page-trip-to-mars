@@ -9,11 +9,9 @@ interface GalleryFlexProps {
 }
 
 export const Container = styled.div<GalleryFlexProps>`
-    display: flex;
-    flex-direction: ${(props) => props.flex};
-    width: ${(props) => props.width};
-    margin: ${(props) => props.margin};
-    justify-content: ${(props) => props.justifyContent};
+     display: flex;
+  flex-direction: ${(props) => props.flex};
+  margin: ${pixelToRem(150, 100, 157, 300)};
 `;
 
 export const Header = styled.div`
@@ -110,9 +108,9 @@ export const TextAbout = styled.p`
     padding-top: ${pixelToRem(26)};
 `;
 
-export const Gallery = styled.div<GalleryFlexProps>`
-    margin: ${pixelToRem(188, 100, 157, 100)};
-    max-width: ${pixelToRem(318)};
+export const Gallery = styled.div`
+    display:flex;
+    background: red;
 `;
 
 export const ContainerAbout = styled.div<GalleryFlexProps>`

@@ -6,6 +6,10 @@ import { Button } from './components/Button';
 import { Icon } from './components/Icon';
 import { pixelToRem } from './utils/pixelToRemFunction';
 
+import { Swiper, SwiperSlide }from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
 function App() {
   return (
     <>
@@ -66,25 +70,28 @@ function App() {
             </AboutMain>
 
             </ContainerAbout>
-          </Container>
 
-          <ContainerLogo>
-            <DivLogo>
-              <Logo/>
-            </DivLogo>
+            <ContainerLogo>
+              <DivLogo>
+                <Logo/>
+              </DivLogo>
+              
+              <TextLogo>
+                O caminho para tornar a humanidade multiplanetária <span>.</span>
+              </TextLogo>
             
-            <TextLogo>
-              O caminho para tornar a humanidade multiplanetária <span>.</span>
-            </TextLogo>
-          
-            <TextSubscribe>
-              Inscreva-se
-            </TextSubscribe>
-          </ContainerLogo>
+              <TextSubscribe>
+                Inscreva-se
+              </TextSubscribe>
+            </ContainerLogo>
                 
-          <Gallery flex="column">
-          
-          </Gallery>
+            <Gallery>
+              <Swiper>
+                <SwiperSlide> </SwiperSlide>
+              </Swiper>
+            </Gallery>
+            
+          </Container>
         </SectionAbout>
 
     </>
