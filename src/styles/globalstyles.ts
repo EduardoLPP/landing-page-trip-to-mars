@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
 
     body{
         -webkit-font-smoothing: antialised;
-        background-color: var(--background);
+        background-color: var(--space-dark);
     }
     
     body, input, textarea, button{
