@@ -8,10 +8,17 @@ interface GalleryFlexProps {
     justifyContent?: string;
 }
 
+interface ImageGalleryProps {
+    width?: number;
+    height?: number;
+    src: string; 
+}
+
 export const Container = styled.div<GalleryFlexProps>`
-     display: flex;
-  flex-direction: ${(props) => props.flex};
-  margin: ${pixelToRem(150, 100, 157, 300)};
+    display: flex;
+    flex-direction: ${(props) => props.flex};
+    justify-content: space-between;
+    margin: ${pixelToRem(150, 100, 157, 100)};
 `;
 
 export const Header = styled.div`
@@ -73,12 +80,12 @@ export const IconsContainer = styled.div`
 `;
 
 export const SectionAbout = styled.div<GalleryFlexProps>` 
-    display: flex;
+    display: flex;  
     justify-content: center;
     background: url("/images/stars.jpg"), no-repeat;
     flex-direction: ${(props) => props.flex};
     background-size: cover;
-    margin-top: ${pixelToRem(100)};
+    margin-top: ${pixelToRem(50)};
 `;
 
 export const ImageMars = styled.image`
@@ -86,7 +93,7 @@ export const ImageMars = styled.image`
     height: ${pixelToRem(621)};
     background-image: url("/images/mars.svg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     margin-right: ${pixelToRem(250)};
 `;
 
@@ -109,20 +116,40 @@ export const TextAbout = styled.p`
 `;
 
 export const Gallery = styled.div`
-    display:flex;
-    background: red;
+    display: flex;
+    max-width: ${pixelToRem(1000)};
+    border-radius: ${pixelToRem(12)};
+`;
+
+export const ImageGallery = styled.img<ImageGalleryProps>`
+    width: ${(props) => props.width && pixelToRem(props.width)};
+    height: ${(props) => props.height && pixelToRem(props.height)};
+    background-repeat: no-repeat;
+    border-radius: ${pixelToRem(12)};
+    src: ${(props) => props.src};
+    object-fit: cover;
+`;
+
+export const ContainerImage = styled.div`
+    display: flex;
+`;
+
+export const GalleryContent = styled.div<GalleryFlexProps>`
+  display: flex;
+  margin: ${pixelToRem(10, 100, 157, 200)};
+  align-items: center;
 `;
 
 export const ContainerAbout = styled.div<GalleryFlexProps>`
     display: flex;
     flex-direction: ${(props) => props.flex};
-    justify-content: center;
+    justify-content: space-between;
     margin-top: ${pixelToRem(180)};
 `;
 
 export const TextLogo = styled.text`
     font: var(--font-heading-1);
-    color: var(--text);
+    color: var(--text); 
 
     span {
         color: var(--mars);
@@ -140,11 +167,11 @@ export const TextSubscribe = styled.div`
 `;
 
 export const ContainerLogo = styled.div`
-    margin: ${pixelToRem(120, 100, 157, 250)};
+    margin: ${pixelToRem(50, 250, 50, 0)};
     max-width: ${pixelToRem(318)};
 `;
 
 export const DivLogo = styled.div`
-    display: flex;
-    padding-bottom: ${pixelToRem(13)};
+    max-width: ${pixelToRem(350)};
+  margin-right: ${pixelToRem(30)};
 `;

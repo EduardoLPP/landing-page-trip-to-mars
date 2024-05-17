@@ -1,21 +1,27 @@
 import { GlobalStyles } from './styles/globalstyles';
 import { Container, Header, Logo, HeaderMain, FirstTitle, Subtitle, SecondTitle, AstronautIllustration, IconsContainer, SectionAbout, ImageMars, AboutMain,
 SecondSubTitle, TextAbout, Gallery, ContainerAbout, TextLogo, TextSubscribe, ContainerLogo,
-DivLogo} from './styles/styles';
+DivLogo,
+GalleryContent,
+ContainerImage,
+ImageGallery} from './styles/styles';
 import { Button } from './components/Button';
 import { Icon } from './components/Icon';
 import { pixelToRem } from './utils/pixelToRemFunction';
 
-import { Swiper, SwiperSlide }from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 function App() {
   return (
     <>
       <GlobalStyles />
       
-      <Container flex='column' margin={ pixelToRem(24, 112, 50) }> 
+      <Container flex='column' margin={ pixelToRem(24, 112, 50, 100) }> 
         <Header>
           <Logo />  
         </Header>
@@ -44,54 +50,91 @@ function App() {
       </Container>
 
       <SectionAbout flex="column">
-        <Container flex="row" width='100%' justifyContent='center'>
+          <Container width='100%'>
 
-          <ContainerAbout flex="row">
-            <ImageMars/>
+            <ContainerAbout width="100%" justifyContent='space-between'>
+              <ImageMars/>
             
-            <AboutMain margin='0 auto'>
-              <FirstTitle>Por que Marte?</FirstTitle>
+              <AboutMain margin='0 auto'>
+                <FirstTitle>Por que Marte?</FirstTitle>
 
-              <SecondSubTitle>Sobre o planeta vermermelho</SecondSubTitle>
+                <SecondSubTitle>Sobre o planeta vermermelho</SecondSubTitle>
 
-              <TextAbout>A uma distância média de 140 milhões de milhas, Marte é um
-                dos vizinhos habitáveis mais próximos da Terra. Marte está mais ou
-                menos metade da distância da Terra do Sol, então ainda tem luz
-                solar descente. Está um pouco frio, mas podemos esquentar. Sua 
-                atmosfera é composta principalmente de CO2 com um pouco de nitrogênio
-                e arg^nio e alguns outros oligoelementos, o que significa que podemos 
-                cultivar plantas em Marte apenas comprimindo a atmosfera. 
-              </TextAbout>
+                <TextAbout>A uma distância média de 140 milhões de milhas, Marte é um
+                  dos vizinhos habitáveis mais próximos da Terra. Marte está mais ou
+                  menos metade da distância da Terra do Sol, então ainda tem luz
+                  solar descente. Está um pouco frio, mas podemos esquentar. Sua 
+                  atmosfera é composta principalmente de CO2 com um pouco de nitrogênio
+                  e arg^nio e alguns outros oligoelementos, o que significa que podemos 
+                  cultivar plantas em Marte apenas comprimindo a atmosfera. 
+                </TextAbout>
 
-              <TextAbout>A gravidade em Marte é cerca de 38% da da Terra, então você
-                seria capaz de levantar coisas pesadas e dar voltas. Além disso, o 
-                o dia está notavelmente próximo ao da terra.
-              </TextAbout>
-            </AboutMain>
+                <TextAbout>A gravidade em Marte é cerca de 38% da da Terra, então você
+                  seria capaz de levantar coisas pesadas e dar voltas. Além disso, o 
+                  o dia está notavelmente próximo ao da terra.
+                </TextAbout>
+              </AboutMain>
 
-            </ContainerAbout>
+              </ContainerAbout>
+            </Container>
 
-            <ContainerLogo>
-              <DivLogo>
-                <Logo/>
-              </DivLogo>
-              
-              <TextLogo>
-                O caminho para tornar a humanidade multiplanetária <span>.</span>
-              </TextLogo>
-            
-              <TextSubscribe>
-                Inscreva-se
-              </TextSubscribe>
-            </ContainerLogo>
+            <GalleryContent>
+              <ContainerLogo>
+                <DivLogo>
+                  <Logo/>
+                </DivLogo>
                 
-            <Gallery>
-              <Swiper>
-                <SwiperSlide> </SwiperSlide>
-              </Swiper>
-            </Gallery>
-            
-          </Container>
+                <TextLogo>
+                  O caminho para tornar a humanidade multiplanetária <span>.</span>
+                </TextLogo>
+              
+                <TextSubscribe>
+                  Inscreva-se
+                </TextSubscribe>
+              </ContainerLogo>
+                  
+              <Gallery>
+                <Swiper navigation={true} className="mySwiper" modules={[Navigation]} slidesPerView={2} spaceBetween={20}>
+                  <SwiperSlide>
+                    <ContainerImage>
+                      <ImageGallery width={400} height={400}  src='/images/gallery-1.jpg' />
+                    </ContainerImage>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <ContainerImage>
+                      <ImageGallery width={400} height={400}  src='/images/gallery-2.jpg' />
+                    </ContainerImage>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <ContainerImage>
+                      <ImageGallery width={400} height={400}  src='/images/gallery-3.jpg' />
+                    </ContainerImage>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <ContainerImage>
+                      <ImageGallery width={400} height={400}  src='/images/gallery-1.jpg' />
+                    </ContainerImage>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <ContainerImage>
+                      <ImageGallery width={400} height={400}  src='/images/gallery-2.jpg' />
+                    </ContainerImage>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <ContainerImage>
+                      <ImageGallery width={400} height={400}  src='/images/gallery-3.jpg' />
+                    </ContainerImage>
+                  </SwiperSlide>
+                  
+                </Swiper>
+              </Gallery>
+            </GalleryContent>
+
         </SectionAbout>
 
     </>
