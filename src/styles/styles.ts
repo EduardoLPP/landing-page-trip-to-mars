@@ -117,8 +117,15 @@ export const TextAbout = styled.p`
 
 export const Gallery = styled.div`
     display: flex;
-    max-width: ${pixelToRem(1000)};
+    max-width: ${pixelToRem(1200)};
     border-radius: ${pixelToRem(12)};
+
+    & .swiper-button-prev {
+        color: var(--mars);
+    }
+    & .swiper-button-next {
+        color: var(--mars);
+    }
 `;
 
 export const ImageGallery = styled.img<ImageGalleryProps>`
@@ -167,7 +174,7 @@ export const TextSubscribe = styled.div`
 `;
 
 export const ContainerLogo = styled.div`
-    margin: ${pixelToRem(50, 250, 50, 0)};
+    margin: ${pixelToRem(50, 30, 50, 0)};
     max-width: ${pixelToRem(318)};
 `;
 
