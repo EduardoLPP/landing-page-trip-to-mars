@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { pixelToRem } from "../utils/pixelToRemFunction";
+import { device } from "./responsive";
 
 interface GalleryFlexProps { 
     flex?: "row" | "column"; 
@@ -18,7 +19,7 @@ export const Container = styled.div<GalleryFlexProps>`
     display: flex;
     flex-direction: ${(props) => props.flex};
     justify-content: space-between;
-    margin: ${pixelToRem(150, 100, 157, 100)};
+    margin: ${pixelToRem(10, 100, 157, 100)};
 `;
 
 export const Header = styled.div`
@@ -69,6 +70,21 @@ export const AstronautIllustration = styled.image`
     position: absolute;
     right: ${pixelToRem(0)};
     top: ${pixelToRem(15)};
+
+    @media ${device.mobile} {
+    position: relative;
+    order: 4;
+    width: ${pixelToRem(307)};
+    left: ${pixelToRem(55)};
+  }
+
+  @media (max-width: ${pixelToRem(1200)}) {
+    position: relative;
+    order: 4;
+    width: ${pixelToRem(472)};
+    height: ${pixelToRem(600)};
+    left: 0;
+  }
 `;
 
 export const IconsContainer = styled.div`
@@ -85,21 +101,21 @@ export const SectionAbout = styled.div<GalleryFlexProps>`
     background: url("/images/stars.jpg"), no-repeat;
     flex-direction: ${(props) => props.flex};
     background-size: cover;
-    margin-top: ${pixelToRem(50)};
+    margin-top: ${pixelToRem(20)};
 `;
 
 export const ImageMars = styled.image`
-    width: ${pixelToRem(621)};
-    height: ${pixelToRem(621)};
+    width: ${pixelToRem(450)};
+    height: ${pixelToRem(450)};
     background-image: url("/images/mars.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin-right: ${pixelToRem(250)};
+    margin-right: ${pixelToRem(220)};
 `;
 
 export const AboutMain = styled.div<GalleryFlexProps>`
     max-width: ${pixelToRem(603)};
-    padding-top: ${pixelToRem(100)};
+    padding-top: ${pixelToRem(50)};
     margin: ${(props) => props.margin};
 `;
 
@@ -117,7 +133,7 @@ export const TextAbout = styled.p`
 
 export const Gallery = styled.div`
     display: flex;
-    max-width: ${pixelToRem(1200)};
+    max-width: ${pixelToRem(1000)};
     border-radius: ${pixelToRem(12)};
 
     & .swiper-button-prev {
@@ -143,7 +159,7 @@ export const ContainerImage = styled.div`
 
 export const GalleryContent = styled.div<GalleryFlexProps>`
   display: flex;
-  margin: ${pixelToRem(10, 100, 157, 200)};
+  margin: ${pixelToRem(10, 100, 157, 150)};
   align-items: center;
 `;
 
