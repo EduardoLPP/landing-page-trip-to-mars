@@ -94,7 +94,7 @@ function App() {
               </ContainerLogo>
                   
               <Gallery>
-                <Swiper navigation={true} className="mySwiper" modules={[Navigation]} slidesPerView={2} spaceBetween={20}>
+                <Swiper loop style={{padding: "0 47px"}} navigation={true} className="mySwiper" modules={[Navigation]} slidesPerView={3} spaceBetween={300}>
                   <SwiperSlide>
                     <ContainerImage>
                       <ImageGallery width={400} height={400}  src='/images/gallery-1.jpg' />
