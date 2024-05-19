@@ -1,27 +1,17 @@
 import { GlobalStyles } from './styles/globalstyles';
 import { Container, Header, Logo, HeaderMain, FirstTitle, Subtitle, SecondTitle, AstronautIllustration, IconsContainer, SectionAbout, ImageMars, AboutMain,
-SecondSubTitle, TextAbout, Gallery, ContainerAbout, TextLogo, TextSubscribe, ContainerLogo,
-DivLogo,
-GalleryContent,
-ContainerImage,
-ImageGallery} from './styles/styles';
+SecondSubTitle, TextAbout, ContainerAbout, TextLogo, TextSubscribe, ContainerLogo, DivLogo, GalleryContent} from './styles/styles';
 import { Button } from './components/Button';
 import { Icon } from './components/Icon';
 import { pixelToRem } from './utils/pixelToRemFunction';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Gallery } from './components/Gallery/Index';
 
 function App() {
   return (
     <>
       <GlobalStyles />
       
-      <Container flex='column' margin={ pixelToRem(24, 112, 50, 100) }> 
+      <Container flex='column' margin={ pixelToRem(24, 112, 500, 100) }> 
         <Header>
           <Logo />  
         </Header>
@@ -52,7 +42,7 @@ function App() {
       <SectionAbout flex="column">
           <Container width='100%'>
 
-            <ContainerAbout width="100%" justifyContent='space-between'>
+            <ContainerAbout flex='row'>
               <ImageMars/>
             
               <AboutMain margin='0 auto'>
@@ -93,50 +83,18 @@ function App() {
                 </TextSubscribe>
               </ContainerLogo>
                   
-              <Gallery>
-                <Swiper loop style={{padding: "0 47px"}} navigation={true} className="mySwiper" modules={[Navigation]} slidesPerView={3} spaceBetween={300}>
-                  <SwiperSlide>
-                    <ContainerImage>
-                      <ImageGallery width={400} height={400}  src='/images/gallery-1.jpg' />
-                    </ContainerImage>
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <ContainerImage>
-                      <ImageGallery width={400} height={400}  src='/images/gallery-2.jpg' />
-                    </ContainerImage>
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <ContainerImage>
-                      <ImageGallery width={400} height={400}  src='/images/gallery-3.jpg' />
-                    </ContainerImage>
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <ContainerImage>
-                      <ImageGallery width={400} height={400}  src='/images/gallery-1.jpg' />
-                    </ContainerImage>
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <ContainerImage>
-                      <ImageGallery width={400} height={400}  src='/images/gallery-2.jpg' />
-                    </ContainerImage>
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <ContainerImage>
-                      <ImageGallery width={400} height={400}  src='/images/gallery-3.jpg' />
-                    </ContainerImage>
-                  </SwiperSlide>
-                  
-                </Swiper>
-              </Gallery>
+              <Gallery />
             </GalleryContent>
 
         </SectionAbout>
 
+        {/* <SectionForm>
+          <FormContainer>
+            <Form>
+
+            </Form>
+          </FormContainer>
+        </SectionForm> */}
     </>
   );
 }

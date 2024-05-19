@@ -9,17 +9,11 @@ interface GalleryFlexProps {
     justifyContent?: string;
 }
 
-interface ImageGalleryProps {
-    width?: number;
-    height?: number;
-    src: string; 
-}
-
 export const Container = styled.div<GalleryFlexProps>`
     display: flex;
     flex-direction: ${(props) => props.flex};
     justify-content: space-between;
-    margin: ${pixelToRem(10, 100, 157, 100)};
+    margin: ${pixelToRem(0, 100, 80, 100)};
 `;
 
 export const Header = styled.div`
@@ -29,8 +23,9 @@ export const Header = styled.div`
 
 export const Logo = styled.image`
     background-image: url("/images/logo-space-y.svg");
-    width: ${pixelToRem(201)};
-    height: ${pixelToRem(41)};
+    width: ${pixelToRem(250)};
+    height: ${pixelToRem(50)};
+    background-repeat: no-repeat;
 `;
 
 export const HeaderMain = styled.div`
@@ -101,7 +96,6 @@ export const SectionAbout = styled.div<GalleryFlexProps>`
     background: url("/images/stars.jpg"), no-repeat;
     flex-direction: ${(props) => props.flex};
     background-size: cover;
-    margin-top: ${pixelToRem(20)};
 `;
 
 export const ImageMars = styled.image`
@@ -131,38 +125,6 @@ export const TextAbout = styled.p`
     padding-top: ${pixelToRem(26)};
 `;
 
-export const Gallery = styled.div`
-    display: flex;
-    max-width: ${pixelToRem(1000)};
-    border-radius: ${pixelToRem(12)};
-
-    & .swiper-button-prev {
-        color: var(--mars);
-    }
-    & .swiper-button-next {
-        color: var(--mars);
-    }
-`;
-
-export const ImageGallery = styled.img<ImageGalleryProps>`
-    width: ${(props) => props.width && pixelToRem(props.width)};
-    height: ${(props) => props.height && pixelToRem(props.height)};
-    background-repeat: no-repeat;
-    border-radius: ${pixelToRem(12)};
-    src: ${(props) => props.src};
-    object-fit: cover;
-`;
-
-export const ContainerImage = styled.div`
-    display: flex;
-`;
-
-export const GalleryContent = styled.div<GalleryFlexProps>`
-  display: flex;
-  margin: ${pixelToRem(10, 100, 157, 150)};
-  align-items: center;
-`;
-
 export const ContainerAbout = styled.div<GalleryFlexProps>`
     display: flex;
     flex-direction: ${(props) => props.flex};
@@ -190,11 +152,17 @@ export const TextSubscribe = styled.div`
 `;
 
 export const ContainerLogo = styled.div`
-    margin: ${pixelToRem(50, 30, 50, 0)};
+    margin: ${pixelToRem(50, 40, 50, 0)};
     max-width: ${pixelToRem(318)};
 `;
 
-export const DivLogo = styled.div`
+export const DivLogo = styled.div`  
     max-width: ${pixelToRem(350)};
-  margin-right: ${pixelToRem(30)};
+    margin-right: ${pixelToRem(400)};
+`;
+
+export const GalleryContent = styled.div<GalleryFlexProps>`
+    display: flex;
+    margin: ${pixelToRem(50, 100, 157, 100)};
+    align-items: center;
 `;
