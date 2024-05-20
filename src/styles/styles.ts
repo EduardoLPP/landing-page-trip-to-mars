@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { pixelToRem } from "../utils/pixelToRemFunction";
 import { device } from "./responsive";
+import { motion } from "framer-motion";
 
 interface GalleryFlexProps { 
     flex?: "row" | "column"; 
@@ -165,4 +166,23 @@ export const GalleryContent = styled.div<GalleryFlexProps>`
     display: flex;
     margin: ${pixelToRem(50, 100, 157, 100)};
     align-items: center;
+`;
+
+
+export const SectionForm = styled.div`
+    display: flex;
+    width: 100%;
+    background: url("/images/background-stars-form.jpg") no-repeat;
+    background-size: cover;
+    justify-content: space-around;
+`;  
+
+
+export const DivRocketImage = styled(motion.div)`
+  display: flex;
+`;
+
+export const RocketImage = styled(motion.image)`
+  width: ${pixelToRem(980)};
+  height: ${pixelToRem(980)};
 `;

@@ -47,6 +47,7 @@ export const GlobalStyles = createGlobalStyle`
         --text: #fff;
         --background: #04032c;
         --background-section: linear-gradient(180deg, #040327 0%, #0d0e13 24.49%);
+        --background-form: #0E0D40;
 
         --font-display: 800 ${pixelToRem(42)}/${pixelToRem(76)} "Heboo", sans-serif;
         --font-heading-1: 700 ${pixelToRem(32)}/${pixelToRem(48)} "Heboo", sans-serif; 
