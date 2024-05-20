@@ -1,10 +1,14 @@
 import { GlobalStyles } from './styles/globalstyles';
 import { Container, Header, Logo, HeaderMain, FirstTitle, Subtitle, SecondTitle, AstronautIllustration, IconsContainer, SectionAbout, ImageMars, AboutMain,
-SecondSubTitle, TextAbout, ContainerAbout, TextLogo, TextSubscribe, ContainerLogo, DivLogo, GalleryContent} from './styles/styles';
+SecondSubTitle, TextAbout, ContainerAbout, TextLogo, TextSubscribe, ContainerLogo, DivLogo, GalleryContent,
+SectionForm,
+DivRocketImage,
+RocketImage} from './styles/styles';
 import { Button } from './components/Button';
 import { Icon } from './components/Icon';
 import { pixelToRem } from './utils/pixelToRemFunction';
 import { Gallery } from './components/Gallery/Index';
+import { Form } from './components/Form';
 
 function App() {
   return (
@@ -30,7 +34,7 @@ function App() {
         <Button title='Inscreva-se agora' fullwidth={false}/>
 
         <IconsContainer>
-          <Icon src="/images/icon-rocket.svg" text="Foguetes com a mais alta texnologia e conforto" alt='Rocket'/>
+          <Icon src="/images/icon-rocket.svg" text="Foguetes com a mais alta tecnologia e conforto" alt='Rocket'/>
 
           <Icon src="/images/icon-flag.svg" text="Mais de 100 missões consecutivas com sucesso" alt='Flag'/>
 
@@ -86,15 +90,31 @@ function App() {
               <Gallery />
             </GalleryContent>
 
-        </SectionAbout>
+      </SectionAbout>
 
-        {/* <SectionForm>
-          <FormContainer>
-            <Form>
+      <SectionForm>
 
-            </Form>
-          </FormContainer>
-        </SectionForm> */}
+        <Form />
+          
+          <DivRocketImage
+            whileInView="visible"
+            initial="initial"
+            viewport={{ once: true }}
+            variants={{
+              initial: { opacity: 0, y: 0 },
+              visible: {
+                opacity: 1,
+                y: -100,
+                transition: { duration: 1, delay: 1 },
+              },
+            }}
+
+          >
+            <RocketImage>
+              <img src="/images/rocket.svg" alt="Rocket" />
+            </RocketImage>
+          </DivRocketImage>
+        </SectionForm>
     </>
   );
 }

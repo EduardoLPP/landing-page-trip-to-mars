@@ -12,7 +12,7 @@ export const ImageIcon = styled.image<IconProps>`
     width: ${pixelToRem(56)};
     height: ${pixelToRem(56)};
     background: ${(props) => `url(${props.src})`};
-   background-repeat: no-repeat;
+    background-repeat: no-repeat;
 `;
 
 export const TextIcon = styled.p`

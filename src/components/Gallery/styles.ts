@@ -23,12 +23,11 @@ interface GalleryFlexProps {
     width?: string;
     margin?: string;
     justifyContent?: string;
-    
 }
 
 export const Container = styled.div`
     display: flex;
-    max-width: ${pixelToRem(1150)};
+    max-width: ${pixelToRem(1000)};
     border-radius: ${pixelToRem(12)};
 
     & .swiper-button-prev {
@@ -51,5 +50,5 @@ export const ImageGallery = styled.img<ImageGalleryProps>`
     src: ${(props) => props.src};
     object-fit: cover;
 
-    animation: ${swiper} 20s linear infinite ;
+    animation: ${swiper} 30s linear infinite ;
 `;
