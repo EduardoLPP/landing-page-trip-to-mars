@@ -1,5 +1,5 @@
-import { Container } from "../Gallery/styles";
-import { Input, Label } from "./styles";
+
+import { Container, Input, Label } from "./styles";
 
 
 export interface FormProps {
@@ -9,7 +9,6 @@ export interface FormProps {
 
 export function FormInput({...props }: FormProps) {
   return (
-    <>
       <Container>
         <Label>
           {props.text}
@@ -17,6 +16,5 @@ export function FormInput({...props }: FormProps) {
 
         <Input />
       </Container>
-    </>
   );
 }
