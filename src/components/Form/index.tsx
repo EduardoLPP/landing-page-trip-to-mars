@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, DivInputCheckbox, FormComponent, IconForm, Input, InputCheckbox, Label, SubtitleForm, TextCheckbox, TitleForm} from './styles'
+import { Container, ContainerForm, ContainerInputCheckbox, IconForm, InputCheckbox, SubtitleForm, TextCheckbox, TitleForm} from './styles'
 import { Button } from '../Button';
 import { FormInput } from '../FormInput';
 
@@ -25,18 +25,20 @@ export function Form() {
             </TitleForm>
 
             <SubtitleForm>
-              Preencha os campos abaixo para entrar na lista de espera
+              Preencha os campos abaixo para entrar na lista de espera.
             </SubtitleForm>
 
-            <FormInput type="text" text='Seu nome' />
-            <FormInput type="email" text='E-mail' />
-            <FormInput type="number" text='Telefone' />
-
-            <DivInputCheckbox>
+            <ContainerForm>
+              <FormInput type="text" text='Seu nome' />
+              <FormInput type="email" text='E-mail' />
+              <FormInput type="number" text='Telefone' />
+            </ContainerForm>
+            
+            <ContainerInputCheckbox>
               <InputCheckbox type="checkbox" />
 
               <TextCheckbox>Concordo em receber comunicações</TextCheckbox>
-            </DivInputCheckbox>
+            </ContainerInputCheckbox>
 
             <Button title="Garantir minha vaga" fullwidth />
 

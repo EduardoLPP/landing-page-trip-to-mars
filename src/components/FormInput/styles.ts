@@ -8,14 +8,14 @@ export const Container = styled(motion.form)`
 `;
 
 export const Label = styled.label`
-  font: var(--text-1);
+  font: var(--text-01);
   color: var(--text);
-  padding: ${pixelToRem(24, 0)};
+  padding: ${pixelToRem(7, 0)};
 `;
 
 export const Input = styled.input`
-  width: ${pixelToRem(416)};
-  height: ${pixelToRem(56)};
+  width: ${pixelToRem(360)};
+  height: ${pixelToRem(40)};
   border: 1px solid var(--gray-05);
   border-radius: ${pixelToRem(6)};
   background: var(--background-form);

@@ -1,9 +1,12 @@
 import { GlobalStyles } from './styles/globalstyles';
 import { Container, Header, Logo, HeaderMain, FirstTitle, Subtitle, SecondTitle, AstronautIllustration, IconsContainer, SectionAbout, ImageMars, AboutMain,
-SecondSubTitle, TextAbout, ContainerAbout, TextLogo, TextSubscribe, ContainerLogo, DivLogo, GalleryContent,
-SectionForm,
-DivRocketImage,
-RocketImage} from './styles/styles';
+SecondSubTitle, TextAbout, ContainerAbout, TextLogo, TextSubscribe, ContainerLogo, DivLogo, GalleryContent, SectionForm, DivRocketImage, RocketImage,
+SectionFooter,
+ContainerImageSmoke,
+ContainerFooterBottom,
+ContainerSocialMedia,
+ContainerFooterMenu,
+ContainerFooterLogo} from './styles/styles';
 import { Button } from './components/Button';
 import { Icon } from './components/Icon';
 import { pixelToRem } from './utils/pixelToRemFunction';
@@ -93,10 +96,29 @@ function App() {
       </SectionAbout>
 
       <SectionForm>
-
         <Form />
           
-          <DivRocketImage
+        <DivRocketImage
+          whileInView="visible"
+          initial="initial"
+          viewport={{ once: true }}
+          variants={{
+            initial: { opacity: 0, y: 0 },
+            visible: {
+              opacity: 1,
+              y: -100,
+              transition: { duration: 1, delay: 1 },
+            },
+          }}>
+            
+          <RocketImage>
+            <img src="/images/rocket.svg" alt="Rocket" />
+          </RocketImage>
+        </DivRocketImage>
+        </SectionForm>
+
+        <SectionFooter>
+          <ContainerImageSmoke
             whileInView="visible"
             initial="initial"
             viewport={{ once: true }}
@@ -105,16 +127,34 @@ function App() {
               visible: {
                 opacity: 1,
                 y: -100,
-                transition: { duration: 1, delay: 1 },
+                transition: { duration: 0.7, delay: 0.9 },
               },
-            }}
+            }}>
 
-          >
-            <RocketImage>
-              <img src="/images/rocket.svg" alt="Rocket" />
-            </RocketImage>
-          </DivRocketImage>
-        </SectionForm>
+            <img src="/images/smoke.svg" alt="" />
+          </ContainerImageSmoke>
+
+          <ContainerFooterBottom>
+            <ContainerFooterLogo>
+              <Logo />
+            </ContainerFooterLogo>
+
+            <ContainerSocialMedia>
+              <img src="/images/instagram.svg" alt="" />
+              <img src="/images/linkedin.svg" alt="" />
+              <img src="/images/facebook.svg" alt="" />
+            </ContainerSocialMedia>
+
+            <ContainerFooterMenu>
+              <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/">Sobre nós</a></li>
+                <li><a href="/">Missões</a></li>
+                <li><a href="/">Contato</a></li>
+              </ul>
+            </ContainerFooterMenu>
+          </ContainerFooterBottom>  
+        </SectionFooter>
     </>
   );
 }

@@ -14,12 +14,13 @@ export const Container = styled.div<GalleryFlexProps>`
     display: flex;
     flex-direction: ${(props) => props.flex};
     justify-content: space-between;
-    margin: ${pixelToRem(0, 100, 80, 100)};
+    margin: ${pixelToRem(0, 100, 150, 100)};
 `;
 
 export const Header = styled.div`
     display: flex;
-    padding-bottom: ${pixelToRem(95)};
+    padding-top: ${pixelToRem(50)};
+    padding-bottom: ${pixelToRem(80)};
 `;
 
 export const Logo = styled.image`
@@ -32,7 +33,7 @@ export const Logo = styled.image`
 export const HeaderMain = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: ${pixelToRem(715)};
+    max-width: ${pixelToRem(500)};
     padding-bottom: ${pixelToRem(32)};
 `;
 
@@ -84,7 +85,7 @@ export const AstronautIllustration = styled.image`
 `;
 
 export const IconsContainer = styled.div`
-    margin-top: ${pixelToRem(150)};
+    margin-top: ${pixelToRem(200)};
     justify-content: space-between;
     display: flex;
     flex-direction: row;
@@ -130,7 +131,7 @@ export const ContainerAbout = styled.div<GalleryFlexProps>`
     display: flex;
     flex-direction: ${(props) => props.flex};
     justify-content: space-between;
-    margin-top: ${pixelToRem(180)};
+    margin-top: ${pixelToRem(100)};
 `;
 
 export const TextLogo = styled.text`
@@ -157,32 +158,87 @@ export const ContainerLogo = styled.div`
     max-width: ${pixelToRem(318)};
 `;
 
-export const DivLogo = styled.div`  
-    max-width: ${pixelToRem(350)};
-    margin-right: ${pixelToRem(400)};
+export const DivLogo = styled.div` 
+    display: flex;
+    padding-bottom: ${pixelToRem(13)};
 `;
 
 export const GalleryContent = styled.div<GalleryFlexProps>`
     display: flex;
-    margin: ${pixelToRem(50, 100, 157, 100)};
+    margin: ${pixelToRem(50, 100, 250, 100)};
     align-items: center;
 `;
 
-
 export const SectionForm = styled.div`
     display: flex;
-    width: 100%;
-    background: url("/images/background-stars-form.jpg") no-repeat;
+    background: url("/images/background-stars-form.jpg"), no-repeat;
     background-size: cover;
-    justify-content: space-around;
 `;  
-
 
 export const DivRocketImage = styled(motion.div)`
   display: flex;
 `;
 
 export const RocketImage = styled(motion.image)`
-  width: ${pixelToRem(980)};
-  height: ${pixelToRem(980)};
+  width: ${pixelToRem(500)};
+  height: ${pixelToRem(700)};
+`;
+
+export const SectionFooter = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: url("/images/background-stars-form.jpg"), no-repeat;
+
+  @media ${device.mobile} {
+    display: none;
+  }
+`;
+
+export const ContainerImageSmoke = styled(motion.div)`
+  width: 100%;
+  max-height: ${pixelToRem(50)};
+  margin-bottom: 50px;
+  & img {
+    width: 100%;
+  }
+`;
+
+export const ContainerFooterBottom = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: ${pixelToRem(50)};
+`;
+
+export const ContainerSocialMedia = styled.div`
+  display: flex;
+  gap: ${pixelToRem(20)};
+  padding-top: ${pixelToRem(150)};
+
+  & img {
+    width: ${pixelToRem(25)};
+    height: ${pixelToRem(25)};
+  }
+`;
+
+export const ContainerFooterMenu = styled.div`
+  gap: ${pixelToRem(53)};
+  padding-top: ${pixelToRem(150)};
+  
+  & ul {
+    display: flex;
+    list-style: none;
+    gap: ${pixelToRem(53)};
+  }
+
+  & a {
+    color: var(--text);
+    font: var(--text-3);
+    text-decoration: none;
+  }
+`;
+
+export const ContainerFooterLogo = styled.div`
+    display: flex;
+    padding-top: ${pixelToRem(150)};
+  
 `;

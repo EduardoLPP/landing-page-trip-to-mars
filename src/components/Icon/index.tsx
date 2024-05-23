@@ -1,4 +1,3 @@
-import React from 'react'
 import { IconContainer, ImageIcon, TextIcon } from './styles'
 
 export interface IconProps {
