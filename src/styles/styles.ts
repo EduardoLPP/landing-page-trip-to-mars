@@ -144,12 +144,12 @@ export const TextLogo = styled.text`
 `;
 
 export const TextSubscribe = styled.div`
-    font: var(--text-3);
+    font: var(--text-04);
     color: var(--mars);
 
     &:hover{
         cursor: pointer;
-        color: var( --mars-light);
+        color: var(--mars-light);
     }
 `;
 
