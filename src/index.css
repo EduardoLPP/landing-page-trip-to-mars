@@ -1,6 +1,8 @@
-/* body {
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;700&family=Rajdhani:wght@400;500;700&family=Exo+2:wght@400;500;600;700&display=swap');
+
+body {
   margin: 0;
-  font-family: "Heebo", sans-serif;
+  font-family: "Orbitron", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -8,4 +10,4 @@
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-} */
+}

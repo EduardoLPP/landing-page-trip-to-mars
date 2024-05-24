@@ -24,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
     }
     
     body, input, textarea, button{
-        font-family: "Heebo", sans-serif;
+        font-family: "Orbitron", sans-serif;
         font-weight: 400;
     }
 
@@ -49,14 +49,14 @@ export const GlobalStyles = createGlobalStyle`
         --background-section: linear-gradient(180deg, #040327 0%, #0d0e13 24.49%);
         --background-form: #0E0D40;
 
-        --font-display: 800 ${pixelToRem(35)}/${pixelToRem(65)} "Heboo", sans-serif;
-        --font-heading-1: 700 ${pixelToRem(32)}/${pixelToRem(48)} "Heboo", sans-serif; 
-        --font-heading-2: 500 ${pixelToRem(17)}/${pixelToRem(25)} "Heboo", sans-serif;
-        --font-heading-3: 400 ${pixelToRem(12)}/${pixelToRem(18)} "Heboo", sans-serif;
-        --text-04: 500 ${pixelToRem(18)}/${pixelToRem(32)} "Heboo", sans-serif;
-        --text-03: 500 ${pixelToRem(13)}/${pixelToRem(18)} "Heboo", sans-serif;
-        --text-02: 500 ${pixelToRem(14)}/${pixelToRem(20)} "Heboo", sans-serif;
-        --text-01: 400 ${pixelToRem(14)}/${pixelToRem(20)} "Heboo", sans-serif;
-        --text-00: 400 ${pixelToRem(14)}/${pixelToRem(24)} "Heboo", sans-serif;
+        --font-display: 800 ${pixelToRem(35)}/${pixelToRem(65)} "Orbitron", sans-serif;
+        --font-heading-1: 700 ${pixelToRem(25)}/${pixelToRem(45)} "Orbitron", sans-serif; 
+        --font-heading-2: 500 ${pixelToRem(17)}/${pixelToRem(25)} "Orbitron", sans-serif;
+        --font-heading-3: 400 ${pixelToRem(12)}/${pixelToRem(18)} "Orbitron", sans-serif;
+        --text-04: 500 ${pixelToRem(18)}/${pixelToRem(32)} "Orbitron", sans-serif;
+        --text-03: 500 ${pixelToRem(13)}/${pixelToRem(18)} "Orbitron", sans-serif;
+        --text-02: 500 ${pixelToRem(14)}/${pixelToRem(20)} "Orbitron", sans-serif;
+        --text-01: 400 ${pixelToRem(14)}/${pixelToRem(20)} "Orbitron", sans-serif;
+        --text-00: 400 ${pixelToRem(14)}/${pixelToRem(24)} "Orbitron", sans-serif;
     }
 `;

@@ -26,7 +26,7 @@ function App() {
         <HeaderMain>
           <FirstTitle>Finalmente é possível</FirstTitle>
 
-            <SecondTitle>Sua jornada para Marte começa aqui<span>.</span></SecondTitle>
+            <SecondTitle>Sua jornada para Marte começa aqui <span>.</span></SecondTitle>
 
             <AstronautIllustration />
 
@@ -55,14 +55,14 @@ function App() {
               <AboutMain margin='0 auto'>
                 <FirstTitle>Por que Marte?</FirstTitle>
 
-                <SecondSubTitle>Sobre o planeta vermermelho</SecondSubTitle>
+                <SecondSubTitle>Sobre o planeta vermelho</SecondSubTitle>
 
                 <TextAbout>A uma distância média de 140 milhões de milhas, Marte é um
                   dos vizinhos habitáveis mais próximos da Terra. Marte está mais ou
                   menos metade da distância da Terra do Sol, então ainda tem luz
                   solar descente. Está um pouco frio, mas podemos esquentar. Sua 
                   atmosfera é composta principalmente de CO2 com um pouco de nitrogênio
-                  e arg^nio e alguns outros oligoelementos, o que significa que podemos 
+                  e argônio e alguns outros oligoelementos, o que significa que podemos 
                   cultivar plantas em Marte apenas comprimindo a atmosfera. 
                 </TextAbout>
 
@@ -140,8 +140,13 @@ function App() {
             </ContainerFooterLogo>
 
             <ContainerSocialMedia>
-              <img src="/images/instagram.svg" alt="" />
-              <img src="/images/linkedin.svg" alt="" />
+              <a href="https://www.instagram.com/edpasso/">
+                <img src="/images/instagram.svg" alt="" />
+              </a>
+              <a href="https://www.linkedin.com/in/eduardo-leonardo-275b0118a/">
+                <img src="/images/linkedin.svg" alt="" />
+              </a>
+              
               <img src="/images/facebook.svg" alt="" />
             </ContainerSocialMedia>
 
