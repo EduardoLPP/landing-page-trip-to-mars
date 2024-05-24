@@ -7,7 +7,7 @@ export const Container = styled(motion.div)`
     border-radius: ${pixelToRem(10)};
     align-items: center;
     justify-content: center;
-    padding: ${pixelToRem(30, 30, 20, 30)};
+    padding: ${pixelToRem(25, 30, 20, 30)};
     margin-left: ${pixelToRem(150)};
     margin-right: ${pixelToRem(150)};
     max-height: ${pixelToRem(580)};
