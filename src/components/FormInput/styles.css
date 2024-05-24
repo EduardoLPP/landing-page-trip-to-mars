@@ -1,0 +1,48 @@
+
+/* Container style */
+.input-container {
+    display: flex;
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  /* Style for the input */
+  .input-container input {
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: 1px solid var(--gray-05);
+    background: var(--background-form);
+    outline: none;
+    font: var(--text-01);
+    border-radius: 5px;
+    color: var(--text);
+    padding-left: 15px;
+  }
+  
+  /* Label style */
+  .input-container label {
+    color: var(--text);
+    font: var(--text-01);
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    padding-left: 5px;
+  }
+  
+  /* Active state for input */
+  .input-container.focused label {
+    top: -10px;
+    font-size: 12px;
+    color: var(--mars-light);
+    background: var(--background-form);
+    padding-right: 2px;
+  }
+  
+  /* Focused border */
+  .input-container input:focus {
+    border: 1px solid var(--mars-light);
+  }
+  

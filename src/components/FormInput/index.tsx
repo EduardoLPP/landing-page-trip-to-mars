@@ -1,5 +1,5 @@
-
-import { Container, Input, Label } from "./styles";
+import './styles.css';
+import { useState } from "react";
 
 
 export interface FormProps {
@@ -8,13 +8,34 @@ export interface FormProps {
 }
 
 export function FormInput({...props }: FormProps) {
-  return (
-      <Container>
-        <Label>
-          {props.text}
-        </Label>
+  const [isFocused, setIsFocused] = useState(false);
+  const [value, setValue] = useState('');
 
-        <Input />
-      </Container>
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    if (value === '') {
+      setIsFocused(false);
+    }
+  };
+
+  const handleChange = (e : any) => {
+    setValue(e.target.value);
+  };
+
+  return (
+    <div className={`input-container ${isFocused || value ? 'focused' : ''}`}>
+      <input
+        type={props.type}
+        value={value}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        onChange={handleChange}
+        required
+      />
+      <label>{props.text}</label>
+    </div>
   );
 }
