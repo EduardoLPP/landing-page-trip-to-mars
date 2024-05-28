@@ -41,12 +41,25 @@ export const IconContainer = styled.div`
 `;
 
 export const TranslateButton = styled.button`
-  background: none;
+  background: var(--mars);
   border: none;
+  border-radius: 8px;
   cursor: pointer;
+  margin-right: 10px;
+  margin-top: -20px;
+  padding: 20px;
+  height: 50px;
+
+  &:hover{
+    background: var(--mars-light);
+  }
 `;
 
 export const TranslateText = styled.p`
   font: var(--text-01);
-  color: var(--mars);
+  color: var(--text);
+
+  &:hover{
+    color: var(--space-dark);
+  }
 `;
