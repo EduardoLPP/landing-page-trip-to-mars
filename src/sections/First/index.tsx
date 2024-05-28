@@ -3,11 +3,23 @@ import { BsTranslate } from 'react-icons/bs'
 import { pixelToRem } from '../../utils/pixelToRemFunction'
 import { Button } from '../../components/Button'
 import { Icon } from '../../components/Icon'
-import { useTranslation } from 'react-i18next'
+import { I18nContext, useTranslation } from 'react-i18next'
 import { IconContainer, Logo, TranslateButton, TranslateText } from '../../styles/styles'
+import i18n from '../../configuration/translator'
 
 export function FirstSection() {
     const { t } = useTranslation();
+
+    const changeLanguage = () => {
+      const currentLanguage = i18n.language;
+
+      if(currentLanguage == 'en'){
+        i18n.changeLanguage('pt');
+      }
+      else{
+        i18n.changeLanguage('en');
+      }
+    };
     
   return (
     <Container flex='column' margin={ pixelToRem(24, 112, 500, 100) }> 
@@ -15,8 +27,8 @@ export function FirstSection() {
           <Logo />
 
           <IconContainer>
-            <TranslateButton>
-              <TranslateText>Traduzir (pt-Br)</TranslateText>
+            <TranslateButton onClick={() => changeLanguage()}>
+              <TranslateText>{i18n.language == 'en' ? 'Traduzir (pt-Br)' : 'Translate (en)'}</TranslateText>
             </TranslateButton>
             
             <BsTranslate size={30} style={{color: '#E85937'}}/>
