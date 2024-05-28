@@ -2,8 +2,11 @@ import React from 'react'
 import { Container, ContainerForm, ContainerInputCheckbox, IconForm, InputCheckbox, SubtitleForm, TextCheckbox, TitleForm} from './styles'
 import { Button } from '../Button';
 import { FormInput } from '../FormInput';
+import { useTranslation } from 'react-i18next';
 
 export function Form() {
+  const { t, i18n } = useTranslation();
+  
   return (
     <Container
             whileInView="visible"
@@ -20,27 +23,23 @@ export function Form() {
               
             <IconForm />
 
-            <TitleForm>
-              Garanta sua vaga para a primeira viagem
-            </TitleForm>
+            <TitleForm>{t('form-secure')} </TitleForm>
 
-            <SubtitleForm>
-              Preencha os campos abaixo para entrar na lista de espera.
-            </SubtitleForm>
+            <SubtitleForm>{t('form-fill')}</SubtitleForm>
 
             <ContainerForm>
-              <FormInput type="text" text='Seu nome' />
-              <FormInput type="email" text='E-mail' />
-              <FormInput type="number" text='Telefone' />
+              <FormInput type="text" text={t('form-name')} />
+              <FormInput type="email" text={t('form-email')} />
+              <FormInput type="number" text={t('form-number')} />
             </ContainerForm>
             
             <ContainerInputCheckbox>
               <InputCheckbox type="checkbox" />
 
-              <TextCheckbox>Concordo em receber comunicações</TextCheckbox>
+              <TextCheckbox>{t('form-communications')}</TextCheckbox>
             </ContainerInputCheckbox>
 
-            <Button title="Garantir minha vaga" fullwidth />
+            <Button title={t('form-spot')}fullwidth />
 
           </Container>
   )
