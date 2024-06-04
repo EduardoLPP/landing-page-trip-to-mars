@@ -10,12 +10,12 @@ This is a free design available on <a href="https://www.figma.com/design/hR0VJxJ
 
 ### Screenshots
 
-![screeshot-01](public/screenshots/screeshot-01.png)
+![screenshot-01](public/screenshots/screenshot-01.png)
 
-![screeshot-01](public/screenshots/screeshot-02.png)
+![screenshot-01](public/screenshots/screenshot-02.png)
 
-![screeshot-01](public/screenshots/screeshot-03.png)
+![screenshot-01](public/screenshots/screenshot-03.png)
 
-![screeshot-01](public/screenshots/screeshot-04.png)
+![screenshot-01](public/screenshots/screenshot-04.png)
 
-![screeshot-01](public/screenshots/screeshot-05.png)
+![screenshot-01](public/screenshots/screenshot-05.png)
