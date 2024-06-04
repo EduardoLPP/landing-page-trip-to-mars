@@ -10,7 +10,7 @@ export const Container = styled(motion.div)`
     padding: ${pixelToRem(25, 30, 20, 30)};
     margin-left: ${pixelToRem(150)};
     margin-right: ${pixelToRem(150)};
-    max-height: ${pixelToRem(580)};
+    max-height: ${pixelToRem(600)};
 `;
 
 export const IconForm = styled.div`
