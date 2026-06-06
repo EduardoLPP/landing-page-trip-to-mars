@@ -29,9 +29,11 @@ padding-top: ${pixelToRem(50)};
 padding-bottom: ${pixelToRem(80)};
 width: 100%;
 justify-content: space-between;
+align-items: center;
 
 @media ${device.mobile} {
-  padding-bottom: ${pixelToRem(78)};
+  padding-bottom: ${pixelToRem(32)};
+  padding-top: ${pixelToRem(24)};
 }
 `;
 

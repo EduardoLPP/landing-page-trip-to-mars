@@ -7,10 +7,6 @@ export const SectionFooter = styled.div`
   display: flex;
   flex-direction: column;
   background: url("/images/background-stars-form.jpg"), no-repeat;
-
-  @media ${device.mobile} {
-    display: none;
-  }
 `;
 
 export const ContainerImageSmoke = styled(motion.div)`
@@ -21,18 +17,29 @@ export const ContainerImageSmoke = styled(motion.div)`
   & img {
     width: 100%;
   }
+
+  @media ${device.mobile} {
+    display: none;
+  }
 `;
 
 export const ContainerFooterBottom = styled.div`
   display: flex;
   justify-content: space-around;
   margin-bottom: ${pixelToRem(50)};
+
+  @media ${device.mobile} {
+    flex-direction: column;
+    align-items: center;
+    gap: ${pixelToRem(32)};
+    margin-bottom: ${pixelToRem(40)};
+  }
 `;
 
 export const ContainerFooterMenu = styled.div`
   gap: ${pixelToRem(53)};
   padding-top: ${pixelToRem(150)};
-  
+
   & ul {
     display: flex;
     list-style: none;
@@ -44,12 +51,25 @@ export const ContainerFooterMenu = styled.div`
     font: var(--text-3);
     text-decoration: none;
   }
+
+  @media ${device.mobile} {
+    padding-top: 0;
+
+    & ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: ${pixelToRem(24)};
+    }
+  }
 `;
 
 export const ContainerFooterLogo = styled.div`
-    display: flex;
-    padding-top: ${pixelToRem(150)};
-  
+  display: flex;
+  padding-top: ${pixelToRem(150)};
+
+  @media ${device.mobile} {
+    padding-top: 0;
+  }
 `;
 
 export const ContainerSocialMedia = styled.div`
@@ -60,5 +80,9 @@ export const ContainerSocialMedia = styled.div`
   & img {
     width: ${pixelToRem(25)};
     height: ${pixelToRem(25)};
+  }
+
+  @media ${device.mobile} {
+    padding-top: 0;
   }
 `;

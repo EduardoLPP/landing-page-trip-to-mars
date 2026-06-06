@@ -38,6 +38,11 @@ export const IconContainer = styled.div`
   flex-direction: row;
   margin-top: -100px;
   align-items: center;
+
+  @media ${device.mobile} {
+    margin-top: 0;
+    gap: 6px;
+  }
 `;
 
 export const TranslateButton = styled.button`
@@ -53,6 +58,13 @@ export const TranslateButton = styled.button`
   &:hover{
     background: var(--mars-light);
   }
+
+  @media ${device.mobile} {
+    margin-top: 0;
+    padding: 10px 14px;
+    height: auto;
+    margin-right: 0;
+  }
 `;
 
 export const TranslateText = styled.p`
@@ -61,5 +73,9 @@ export const TranslateText = styled.p`
 
   &:hover{
     color: var(--space-dark);
+  }
+
+  @media ${device.mobile} {
+    font-size: 11px;
   }
 `;

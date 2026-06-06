@@ -10,16 +10,12 @@ interface GalleryFlexProps {
     justifyContent?: string;
   }
 
-export const SectionAbout = styled.div<GalleryFlexProps>` 
-  display: flex;  
+export const SectionAbout = styled.div<GalleryFlexProps>`
+  display: flex;
   justify-content: center;
   background: url("/images/stars.jpg"), no-repeat;
   flex-direction: ${(props) => props.flex};
   background-size: cover;
-
-  @media ${device.mobile} {
-    display: none;
-  }
 `;
 
 export const Container = styled.div<GalleryFlexProps>`
@@ -40,6 +36,12 @@ export const ContainerAbout = styled.div<GalleryFlexProps>`
   flex-direction: ${(props) => props.flex};
   justify-content: space-between;
   margin-top: ${pixelToRem(100)};
+
+  @media ${device.mobile} {
+    flex-direction: column;
+    align-items: center;
+    margin-top: ${pixelToRem(50)};
+  }
 `;
 
 export const ImageMars = styled(motion.image)`
@@ -50,12 +52,26 @@ export const ImageMars = styled(motion.image)`
   background-size: 100%;
   margin-right: ${pixelToRem(220)};
   background-position: center;
+
+  @media ${device.mobile} {
+    width: ${pixelToRem(220)};
+    height: ${pixelToRem(220)};
+    margin-right: 0;
+    margin-bottom: ${pixelToRem(24)};
+  }
 `;
 
 export const AboutMain = styled.div<GalleryFlexProps>`
   max-width: ${pixelToRem(603)};
   padding-top: ${pixelToRem(50)};
   margin: ${(props) => props.margin};
+
+  @media ${device.mobile} {
+    max-width: 100%;
+    padding: ${pixelToRem(0, 16)};
+    margin: 0;
+    text-align: center;
+  }
 `;
 
 export const FirstTitle = styled.p`
@@ -87,11 +103,22 @@ export const GalleryContent = styled.div<GalleryFlexProps>`
   display: flex;
   margin: ${pixelToRem(50, 100, 250, 100)};
   align-items: center;
+
+  @media ${device.mobile} {
+    flex-direction: column;
+    margin: ${pixelToRem(40, 16, 80, 16)};
+    align-items: flex-start;
+  }
 `;
 
 export const ContainerLogo = styled.div`
   margin: ${pixelToRem(50, 40, 50, 0)};
   max-width: ${pixelToRem(318)};
+
+  @media ${device.mobile} {
+    margin: ${pixelToRem(0, 0, 32, 0)};
+    max-width: 100%;
+  }
 `;
 
 export const DivLogo = styled.div` 

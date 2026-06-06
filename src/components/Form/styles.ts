@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { pixelToRem } from "../../utils/pixelToRemFunction";
 import { motion } from "framer-motion";
+import { device } from "../../styles/responsive";
 
 export const Container = styled(motion.div)`
     background: var(--background-form);
@@ -11,6 +12,12 @@ export const Container = styled(motion.div)`
     margin-left: ${pixelToRem(150)};
     margin-right: ${pixelToRem(150)};
     max-height: ${pixelToRem(600)};
+
+    @media ${device.mobile} {
+      margin: ${pixelToRem(0, 16)};
+      max-height: none;
+      width: 100%;
+    }
 `;
 
 export const IconForm = styled.div`
