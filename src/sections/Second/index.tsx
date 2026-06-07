@@ -5,7 +5,7 @@ import { Gallery } from '../../components/Gallery/Index'
 import { useTranslation } from 'react-i18next';
 
 export function SecondSection() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     
   return (
     <SectionAbout flex="column">

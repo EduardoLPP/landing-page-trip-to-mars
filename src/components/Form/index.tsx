@@ -5,7 +5,7 @@ import { FormInput } from '../FormInput';
 import { useTranslation } from 'react-i18next';
 
 export function Form() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   
   return (
     <Container

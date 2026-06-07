@@ -18,13 +18,6 @@ interface ImageGalleryProps {
     src: string; 
 }
 
-interface GalleryFlexProps { 
-    flex?: "row" | "column"; 
-    width?: string;
-    margin?: string;
-    justifyContent?: string;
-}
-
 export const Container = styled.div`
     display: flex;
     max-width: ${pixelToRem(1075)};

@@ -3,7 +3,7 @@ import { Logo } from "../../styles/styles";
 import { ContainerFooterBottom, ContainerFooterLogo, ContainerFooterMenu, ContainerImageSmoke, ContainerSocialMedia, SectionFooter } from "./styles";
 
 export function FooterSection() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     
   return (
     <SectionFooter>
